@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/VAISHNAVI/OneDrive/Desktop/vaishnavi(18022).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Networking — Quick Guide</title>
+  <style>
+
+:root{
+  --bg:#0f1724;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#06b6d4;
+}
+
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(180deg,#f5f9ff,#dceaff);
+  color:#0b1220;
+}
+header{
+  background:linear-gradient(90deg,#0b1220,#0b3a60);
+  color:#fff;
+  padding:30px 18px;
+  text-align:center;
+}
+header h1{
+  margin:0;
+  font-size:32px;
+}
+
+.wrap{
+  max-width:900px;
+  margin:25px auto;
+  padding:0 20px;
+}
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:18px;
+  box-shadow:0 8px 24px rgba(11,18,32,0.08);
+}
+.card h2{
+  margin-top:0;
+  color:#0b3a60;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:10px 0;
+}
+th, td{
+  padding:10px;
+  border-bottom:1px solid #e7e7e7;
+  text-align:left;
+}
+
+
+footer{
+  text-align:center;
+  padding:20px 0;
+  color:var(--muted);
+}
+
+.nav-buttons{margin-top:15px;}
+.nav-buttons button{
+  padding:10px 16px;
+  margin:4px;
+  border:none;
+  background:#06b6d4;
+  color:white;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+}
+.nav-buttons button:hover{
+  background:#0891a6;
+}
+</style>
+</head>
+<body>
+  <header>
+      <h1>STUDY OF NETWORKING</h1>
+      <div class="nav-buttons">
+        <button onclick="scrollToSection(&#39;networking&#39;)">What is Networking</button>
+        <button onclick="scrollToSection(&#39;types&#39;)">Types</button>
+        <button onclick="scrollToSection(&#39;devices&#39;)">Network Devices</button>
+        <button onclick="scrollToSection(&#39;ip&#39;)">IP Addressing</button>
+        <button onclick="scrollToSection(&#39;osi&#39;)">OSI Layers</button>
+        <button onclick="scrollToSection(&#39;topology&#39;)">Topologies</button>
+        <button onclick="scrollToSection(&#39;conclusion&#39;)">Conclusion</button>
+      </div>
+    </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2 id="networking" style="cursor: pointer;">1. What is Networking?</h2>
+      <p><strong>Networking</strong> is the practice of connecting two or more computers or devices so they can communicate and share data, resources, and information.</p>
+
+      <div class="card" style="margin:10px 0">
+        <h3 style="margin:6px 0">Why Networking is Important?</h3>
+        <ul class="small">
+          <li>Helps devices share files and data</li>
+          <li>Allows internet access</li>
+          <li>Enables email, messaging, voice/video calls</li>
+          <li>Supports online gaming and streaming</li>
+          <li>Makes cloud storage possible (Google Drive, OneDrive)</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin:10px 0">
+        <h3 style="margin:6px 0">Simple Example</h3>
+        <p class="small">When you open YouTube on your phone, it sends a request through the network, and YouTube servers send video data back to your device. This is possible because of networking.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 id="types" style="cursor: pointer;">2. Types of Networks</h2>
+      <div class="cols">
+        <div>
+          <p class="small muted">Networks are usually classified by geographic scope.</p>
+          <h3>PAN — Personal Area Network</h3>
+          <p>Very small range (a few meters). Example: Bluetooth connections between a phone and earbuds.</p>
+
+          <h3>LAN — Local Area Network</h3>
+          <p>Covers a home, office, or classroom. Examples: wired Ethernet or a home Wi‑Fi network.</p>
+
+          <h3>MAN — Metropolitan Area Network</h3>
+          <p>Covers a city or large campus; used by ISPs or university networks.</p>
+
+          <h3>WAN — Wide Area Network</h3>
+          <p>Connects across cities, countries, or globally. The internet is the largest WAN.</p>
+        </div>
+
+        <aside>
+          <div style="background:#fbfdff;padding:12px;border-radius:10px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.7)">
+            
+           
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 id="ip" style="cursor: pointer;">3. IP Addressing</h2>
+      <p>IP addresses uniquely identify devices on a network. There are two main versions:</p>
+
+      <div class="cols">
+        <div>
+          <h3>IPv4</h3>
+          <p>32‑bit addresses written as dotted decimals (e.g., <code>192.168.1.10</code>). IPv4 provides about 4.3 billion addresses and commonly uses NAT to conserve addresses.</p>
+
+          <h3>IPv6</h3>
+          <p>128‑bit addresses written in hexadecimal colon notation (e.g., <code>2001:0db8::8a2e:0370:7334</code>). Vast address space, improved autoconfiguration, and better routing.
+          </p>
+
+          <h4>DHCP (how IP is assigned)</h4>
+          <pre class="small">               1) Client: DHCPDISCOVER (broadcast)
+               2) Server: DHCPOFFER
+               3) Client: DHCPREQUEST
+               4) Server: DHCPACK
+          </pre>
+        </div>
+
+        <aside>
+          <table>
+            <tbody><tr><th>Feature</th><th>IPv4</th><th>IPv6</th></tr>
+            <tr><td>Size</td><td>32 bits</td><td>128 bits</td></tr>
+            <tr><td>Notation</td><td>Dotted decimal</td><td>Hex groups</td></tr>
+            <tr><td>Auto-config</td><td>DHCP</td><td>SLAAC + DHCPv6</td></tr>
+          </tbody></table>
+        </aside>
+      </div>
+    </section>
+
+    <section class="card">
+      <section class="card">
+      <section class="card">
+      <h2 id="devices" style="cursor: pointer;">4. Network Devices</h2>
+      <p>Network devices are hardware components that connect computers and other devices, allowing communication across a network. Each device has a specific function in managing data flow.</p>
+
+      <h3>Common Network Devices</h3>
+      <h4>1. Router</h4>
+      <p>Routers connect different networks (LAN to WAN) and use IP addresses to determine the best path for data to travel. They enable internet access for home and office networks.</p>
+
+      <h4>2. Switch</h4>
+      <p>Switches operate inside a LAN and forward data based on MAC addresses. They connect multiple devices like PCs, printers, and access points.</p>
+
+      <h4>3. Hub</h4>
+      <p>A hub broadcasts data to all connected devices. It is simple but less efficient compared to switches.</p>
+
+      <h4>4. Access Point (AP)</h4>
+      <p>APs allow wireless devices to connect to a wired network. They enable Wi-Fi networks in homes, schools, and offices.</p>
+
+      <h4>5. Modem</h4>
+      <p>A modem converts digital signals from your network into signals that can travel through your ISP’s infrastructure, enabling internet access.</p>
+
+      
+    </section>
+
+
+    <section class="card">
+      <h2 id="osi" style="cursor: pointer;">5. OSI Layer Explanation</h2>
+      <p>The OSI (Open Systems Interconnection) model explains how data moves from one device to another in 7 structured layers. Each layer has a special function.</p>
+      <ol>
+        <li><strong>Layer 1 – Physical:</strong> Transmits raw bits through cables or wireless signals.</li>
+        <li><strong>Layer 2 – Data Link:</strong> Creates frames, uses MAC addresses, handles error detection.</li>
+        <li><strong>Layer 3 – Network:</strong> Uses IP addresses to route packets between networks.</li>
+        <li><strong>Layer 4 – Transport:</strong> Ensures reliable delivery (TCP) or fast delivery (UDP).</li>
+        <li><strong>Layer 5 – Session:</strong> Manages communication sessions between devices.</li>
+        <li><strong>Layer 6 – Presentation:</strong> Converts data formats (encryption, compression).</li>
+        <li><strong>Layer 7 – Application:</strong> Interfaces used by software like browsers, apps, etc.</li>
+      </ol>
+
+      <h3>Diagram</h3>
+      <pre class="small" style="">[7] Application
+[6] Presentation
+[5] Session
+[4] Transport
+[3] Network
+[2] Data Link
+[1] Physical
+      </pre>
+
+    </section>
+
+    <section class="card">
+      <h2 id="topology" style="cursor: pointer;">6. Network Topologies</h2>
+      <p>Network topology refers to the physical or logical arrangement of devices in a network.</p>
+
+      <h3>Types of Topologies</h3>
+      <ul>
+        <li><strong>Star Topology:</strong> All devices connect to a central switch or hub.</li>
+        <li><strong>Bus Topology:</strong> All devices share a single central cable.</li>
+        <li><strong>Ring Topology:</strong> Devices form a circular path where data travels in one direction.</li>
+        <li><strong>Mesh Topology:</strong> Every device connects to every other device for high reliability.</li>
+      </ul>
+
+      
+
+    </section>
+
+    <section class="card">
+      <h2 id="conclusion" style="cursor: pointer;">7. Conclusion</h2>
+      <p>Networking forms the backbone of all digital communication. Understanding key concepts such as networking types, IP addressing, OSI layers, network devices, and topologies helps you understand how data flows across systems. These fundamentals are essential for designing networks, troubleshooting issues, and pursuing further studies in networking or cybersecurity.</p>
+      
+    </section>
+
+    <footer>© 2025 STUDY OF Networking — Quick Guide</footer>
+  </section></section></main>
+
+  <script>
+   
+    const packet = document.getElementById('packet');
+    let anim;
+    function sendPacket(){
+      resetPacket();
+      const lane = document.getElementById('lane');
+      const max = lane.clientWidth - 120;
+      let x = 10;
+      anim = setInterval(()=>{
+        x += 6;
+        packet.style.left = x + 'px';
+        if(x >= max){
+          clearInterval(anim);
+          packet.innerText = 'DELIVERED';
+          packet.style.background = '#059669';
+        }
+      },25);
+    }
+    function resetPacket(){
+      clearInterval(anim);
+      packet.style.left = '10px';
+      packet.innerText = 'PACKET';
+      packet.style.background = '#0b1220';
+    }
+
+   
+    function toggleDarkMode(){
+      document.body.classList.toggle('dark');
+    }
+
+    
+    document.querySelectorAll('.card h2').forEach(title =>{
+      title.style.cursor = 'pointer';
+      title.addEventListener('click', ()=>{
+        const content = title.nextElementSibling;
+        if(content.style.display === 'none'){
+          content.style.display = 'block';
+        } else {
+          content.style.display = 'none';
+        }
+      });
+    });
+
+    
+    const osiInfo = {
+      1:"Physical: Bits, cables, signals.",
+      2:"Data Link: MAC address, frames.",
+      3:"Network: IP address, routing.",
+      4:"Transport: TCP/UDP ports.",
+      5:"Session: Controls sessions.",
+      6:"Presentation: Encryption & formatting.",
+      7:"Application: Apps like HTTP, DNS."
+    };
+
+    document.querySelectorAll('pre.small').forEach(pre =>{
+      pre.addEventListener('mouseover', ()=>{
+        pre.style.background = '#e6f3ff';
+      });
+      pre.addEventListener('mouseout', ()=>{
+        pre.style.background = '';
+      });
+    });
+    // Smooth scrolling to sections
+    function scrollToSection(id){
+      const el = document.getElementById(id);
+      el.scrollIntoView({behavior:'smooth'});
+    }
+</script>
+
+
+</body></html>
